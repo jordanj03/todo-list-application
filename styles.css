@@ -1,17 +1,52 @@
+/* - Spacing system (px) */
+/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Comfortaa";
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+html {
+  background-color: #343a40;
+  font-size: 62.5%;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: none;
+  box-shadow: none !important;
+  caret-color: #ced4da;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #ced4da;
+}
+
+#input-text {
+  /* width: 100%; */
+  font-size: 2rem;
+  padding: 1rem 0;
+  /* margin-bottom: 1.6rem; */
+  background: #495057;
+  border-radius: 12px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto 0;
+  margin: 1.6rem auto 0;
   max-width: 400px;
   width: 100%;
 }
@@ -20,6 +55,22 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.input-container {
+  margin-bottom: 1.6rem;
+}
+
+.input-form {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  width: 100%;
+}
+
+.main-text {
+  color: #f1f3f5;
+  font-size: 4rem;
+  margin-bottom: 0.8rem;
 }
 
 .completed {

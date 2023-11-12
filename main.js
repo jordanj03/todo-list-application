@@ -6,9 +6,8 @@ window.addEventListener("load", () => {
   const localStorage = window.localStorage;
   let localItems = JSON.parse(window.localStorage.getItem("TASKS"));
   let items = [];
-  console.log(localItems);
   // localStorage.clear();
-  if (localItems !== null) {
+  if (localItems !== null && localItems.length > 0) {
     console.log(localItems[0].completed);
     items = localItems;
     subText.innerHTML = "Tasks!";
