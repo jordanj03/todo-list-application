@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   let items = [];
   // localStorage.clear();
   if (localItems !== null && localItems.length > 0) {
-    console.log(localItems[0].completed);
+    // console.log(localItems[0].completed);
     items = localItems;
     subText.innerHTML = "Tasks!";
     // console.log(items);
