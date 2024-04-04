@@ -1,78 +1,116 @@
-/* - Spacing system (px) */
-/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
- */
-
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Comfortaa";
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #00b4d8;
+  --light-color: #caf0f8;
+  --dark-color: #333;
+  --alternate-color: #5eeb5b;
 }
 
-html {
-  background-color: #343a40;
-  font-size: 62.5%;
+::selection {
+  color: var(--primary-color);
+  background: var(--light-color);
+}
+
+::placeholder {
+  color: var(--light-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background: var(--dark-color);
+  color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 5rem;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 3rem;
 }
 
 input {
-  outline: none;
-  border: none;
   background: none;
-  box-shadow: none !important;
-  caret-color: #ced4da;
+  border: 1px solid var(--light-color);
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  color: var(--light-color);
+  width: 100%;
+  height: 3rem;
 }
 
-input:focus {
-  outline: none;
-}
-
-input::placeholder {
-  color: #ced4da;
-}
-
-#input-text {
-  /* width: 100%; */
-  font-size: 2rem;
-  padding: 1rem 0;
-  /* margin-bottom: 1.6rem; */
-  background: #495057;
-  border-radius: 12px;
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: 0;
+  border: none;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  margin: 1.6rem auto 0;
-  max-width: 400px;
-  width: 100%;
+  max-width: 70%;
+  margin-top: 2rem;
+}
+
+.list-container {
+  padding: 0 1rem;
 }
 
 .todo-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.input-container {
-  margin-bottom: 1.6rem;
-}
-
-.input-form {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  width: 100%;
-}
-
-.main-text {
-  color: #f1f3f5;
-  font-size: 4rem;
-  margin-bottom: 0.8rem;
+  margin: 1rem 0;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+.btn {
+  width: 50%;
+
+  padding: 1rem 2rem;
+}
+
+.btn-edit {
+  color: orange;
+}
+
+.btn-delete {
+  color: red;
+}
+
+.save {
+  color: var(--alternate-color);
+}
+
+.btn-submit {
+  width: 100%;
+  color: var(--alternate-color);
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--alternate-color);
+  border-radius: 10px;
 }

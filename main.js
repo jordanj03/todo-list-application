@@ -56,10 +56,12 @@ window.addEventListener("load", () => {
       editBtn.addEventListener("click", () => {
         if (task.hasAttribute("readonly")) {
           editBtn.innerText = "Save";
+          editBtn.classList.add("save");
           task.removeAttribute("readonly");
           task.focus();
         } else {
           editBtn.innerText = "Edit";
+          editBtn.classList.remove("save");
           task.setAttribute("readonly", "readonly");
           items[i].text = task.value;
           localStorage.setItem("TASKS", JSON.stringify(items));
